@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SceduleRequestDto {
+public class ScheduleRequestDto {
     private String todo;
     private Long id;
     private String password;
