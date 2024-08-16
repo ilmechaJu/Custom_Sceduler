@@ -23,7 +23,7 @@ public class ScheduleRepository {
     }
 
     public List<ScheduleResponseDto> findAll() {
-        String sql = "SELECT * FROM memo";
+        String sql = "SELECT * FROM Scedule";
 
         return jdbcTemplate.query(sql, new RowMapper<ScheduleResponseDto>() {
             @Override
@@ -38,7 +38,7 @@ public class ScheduleRepository {
     }
 
     public void delete(Long id) {
-        String sql = "DELETE FROM memo WHERE id = ?";
+        String sql = "DELETE FROM Scedule WHERE id = ?";
         jdbcTemplate.update(sql, id);
     }
 
@@ -71,7 +71,7 @@ public class ScheduleRepository {
 
     public Schedule findById(Long id) {
         // DB 조회
-        String sql = "SELECT * FROM Custom_Scedule WHERE id = ?";
+        String sql = "SELECT * FROM Scedule WHERE id = ?";
 
         return jdbcTemplate.query(sql, resultSet -> {
             if(resultSet.next()) {
@@ -86,7 +86,7 @@ public class ScheduleRepository {
     }
 
     public void update(Long id, ScheduleRequestDto scheduleRequestDto) {
-        String sql = "UPDATE Custom_Scedule SET major_name = ?, to_do = ? WHERE id = ?";
+        String sql = "UPDATE Scedule SET major_name = ?, to_do = ? WHERE id = ?";
         jdbcTemplate.update(sql, scheduleRequestDto.getMajor_name(), scheduleRequestDto.getTodo(), id);
     }
 }

@@ -20,28 +20,29 @@ public class ScheduleController {
     //SceduleService sceduleService = new SceduleService();
 
     @PostMapping("/schedules")
-    public ScheduleResponseDto createSchedule(@RequestBody ScheduleRequestDto scheduleRequestDto) { //DTO형식으로 @
+    public ScheduleResponseDto createSchedules(@RequestBody ScheduleRequestDto scheduleRequestDto) { //DTO형식으로 @
 
         ScheduleService scheduleService = new ScheduleService(jdbcTemplate);
         return scheduleService.createSchedule(scheduleRequestDto);
-
-
     }
+
     @GetMapping("/schedules")
     public List<ScheduleResponseDto> getSchedules() {
         ScheduleService scheduleService = new ScheduleService(jdbcTemplate);
         return scheduleService.getSchedules();
     }
 
-    /*@PutMapping("/memos/{id}")
-    public Long updateMemo(@PathVariable Long id, @RequestBody SceduleRequestDto sceduleRequestDto) {
-        return sceduleService.updateScedule(id, sceduleRequestDto);
-    }*/
+    @PutMapping("/schedules/{id}")
+    public Long updateSchedules(@PathVariable Long id, @RequestBody ScheduleRequestDto scheduleRequestDto) {
+        ScheduleService scheduleService = new ScheduleService(jdbcTemplate);
+        return scheduleService.updateSchedule(id, scheduleRequestDto);
+    }
 
-    /*@DeleteMapping("/memos/{id}")
-    public Long deleteMemo(@PathVariable Long id) {
-        return SceduleService.deleteScedule(id);
-    }*/
+    @DeleteMapping("/schedules/{id}")
+    public Long deleteSchedules(@PathVariable Long id) {
+        ScheduleService scheduleService = new ScheduleService(jdbcTemplate);
+        return scheduleService.deleteSchedule(id);
+    }
 
 
 }
