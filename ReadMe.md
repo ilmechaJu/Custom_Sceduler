@@ -6,7 +6,20 @@
     1. 구현하고자 하는 서비스의 전체적인 흐름을 파악하고 필요한 기능을 설계할 수 있습니다.
     2. API 명세서, ERD, SQL을 작성할 수 있습니다.
     3. Spring Boot를 기반으로 CRUD(Create, Read, Update, Delete) 기능이 포함된 REST API를 만들 수 있습니다.
- 
+
+ ## <API 명새서>
+| 기능       | Method | URL                | return                   |
+|----------|--------|--------------------|--------------------------|
+| 스케줄 생성하기 | POST   | /api/scedules      | SceduleResponseDto       |
+| 스케줄 조회하기 | GET    | /api/scedules      | List<SceduleResponseDto> |
+| 스케줄 수정하기 | PUT    | /api/scedules/{id} | Long updateSchedules |
+| 스케줄 삭제하기 | DELETE | /api/scedules/{id} | Long deleteSchedules |
+
+## <ERD>
+<img width="237" alt="스크린샷 2024-08-16 10 53 40" src="https://github.com/user-attachments/assets/0e584051-c94e-4011-9691-441fc8d91081">
+
+
+
 - **API 실행 및 테스트 하기!**
     - 과제를 진행 하시면서 여러분들이 개발한 API가 요구사항에 맞게 동작 하는지 확인하려면 API가 반환하는 반환(결과) 값을 계속해서 확인해야 한다.
     - 이때, 더 쉽게 확인 하실 수 있는 도구로 Postman을 사용했습니다. 
@@ -28,16 +41,4 @@
             
             [Example usage for org.springframework.http ResponseEntity ok](http://www.java2s.com/example/java-api/org/springframework/http/responseentity/ok-1-0.html)
           
-
-
-| 기능       | Method | URL                | return                   |
-|----------|--------|--------------------|--------------------------|
-| 스케줄 생성하기 | POST   | /api/scedules      | SceduleResponseDto       |
-| 스케줄 조회하기 | GET    | /api/scedules      | List<SceduleResponseDto> |
-| 스케줄 수정하기 | PUT    | /api/scedules/{id} | Long updateSchedules |
-| 스케줄 삭제하기 | DELETE | /api/scedules/{id} | Long deleteSchedules |
-
-
-<img width="237" alt="스크린샷 2024-08-16 10 53 40" src="https://github.com/user-attachments/assets/0e584051-c94e-4011-9691-441fc8d91081">
-
 
