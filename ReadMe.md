@@ -1,5 +1,5 @@
 <aside>
-🏁 **Goal:  "나만의 일정 관리 앱 서버 만들기"**
+ ## 🏁 **Goal:  "나만의 일정 관리 앱 서버 만들기"**
 </aside>
 
 - **Custom_Sceduler Project를 통해 얻을 수 있는 것** 👍
@@ -15,7 +15,7 @@
 | 스케줄 수정하기 | PUT    | /api/scedules/{id} | Long updateSchedules |
 | 스케줄 삭제하기 | DELETE | /api/scedules/{id} | Long deleteSchedules |
 
- ## <프로젝트 ERD>
+### <프로젝트 ERD>
 <img width="237" alt="스크린샷 2024-08-16 10 53 40" src="https://github.com/user-attachments/assets/0e584051-c94e-4011-9691-441fc8d91081">
 
 
